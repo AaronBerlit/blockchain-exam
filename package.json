@@ -1,0 +1,23 @@
+{
+  "name": "blockchain-exam",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Time-locked exam papers: 3-of-5 staff unlock, commit-reveal, stake penalties, random paper pick, soulbound college tokens, IPFS storage.",
+  "scripts": {
+    "compile": "node scripts/d-env.cjs hardhat compile",
+    "test": "node scripts/d-env.cjs hardhat test",
+    "node": "node scripts/d-env.cjs hardhat node",
+    "demo:setup": "node scripts/d-env.cjs hardhat compile --quiet && node scripts/d-env.cjs node scripts/demo-setup.mjs",
+    "demo:reveal": "node scripts/d-env.cjs node scripts/demo-reveal.mjs",
+    "verify-hash": "node scripts/d-env.cjs node scripts/verify-hash.mjs",
+    "portal": "node scripts/d-env.cjs npm --prefix frontend run dev"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^6.1.2",
+    "@openzeppelin/contracts": "^5.6.1",
+    "dotenv": "^18.0.8",
+    "hardhat": "^2.29.1",
+    "multiformats": "^14.0.5",
+    "shamir-secret-sharing": "^0.0.4"
+  }
+}
